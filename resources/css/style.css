@@ -1,0 +1,322 @@
+/* Universal Styles */
+
+html {
+  font-family: "Century Gothic", sans-serif;
+  color: rgb(83, 84, 86);
+  font-size: 20px;
+}
+
+p {
+font-size: 0.7rem;
+}
+
+/* header & footer */
+
+header, footer, .nav-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+header {
+  height: 64px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  margin-left: 24px;
+}
+
+.head img {
+  height: 55px;
+}
+
+.nav {
+  margin-right: 24px;
+}
+
+.nav span {
+  margin-left: 16px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* general - mobile version*/
+.nav-mobile {
+width: 100%;
+}
+
+/* responsive - NO MOBILE (LARGE SCREEN) version*/
+
+@media only screen and (min-width: 500px) {
+
+/*header - icons disappear
+information section - right imaages mobile version disappear */
+.nav-mobile,
+ .imgsquareMob {
+  display: none;
+}
+
+/*banner & information section -  is a flexbox on large screen only*/
+.container,
+.information {
+  display: flex;
+}
+/*banner - big heading top distance estimated*/
+.script h1 {
+  margin-top: 30%;
+}
+
+/*all left & right sections are not full width but 60-40 proportion*/
+.left {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+.right {
+  width: 40%;
+  padding: 16px 0;
+}
+
+/*information section right is divided 35-65 on large screen only*/
+.imgsquare {
+  width: 35%;
+  overflow: hidden;
+}
+
+.imgsquare img {
+  width: 100%;
+  height: auto;
+  padding: 16px;
+}
+
+.details {
+  width: 65%;
+}
+
+/*information section right - bottom box is grey on large screen only*/
+#grey {
+  background-color: rgb(212, 214, 216);
+}
+
+/*lerning section -  is a flexbox wrap on large screen only*/
+.containLearn {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 66px;
+}
+
+/*lerning section -  title & boxes background color*/
+.learn, .containLearn {
+  background-color: rgb(212, 214, 216);
+}
+
+.infovert {
+  padding: 16px 16px 32px 16px;
+  width: 26%;
+}
+
+.LearnScript {
+  margin: 16px 16px 24px 16px;
+}
+
+} /* this closes the NO MOBILE VERSION responsive rule*/
+
+/* responsive - MOBILE VERSION*/
+
+@media only screen and (max-width: 500px) {
+
+/*header & footer - text disappear
+left block under Main information section disappear
+right block & left text under thesis section disappear
+square images disappear
+*/
+.nav,
+.logo,
+#practice,
+.thesis h4,
+.thesis p,
+.imgsquare,
+.infovert img,
+.LearnScript p {
+  display: none;
+}
+
+.right {
+  padding: 16px 16px 0 16px;
+}
+
+
+
+/*banner only - big heading top distance 0 added to 32px padding of its parent element(.right), equalling to 32px as requested
+bottom distance 8px added to 26px h4 margin, equalling to 32px as requested*/
+.script h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/*information section right images are full width*/
+.imgsquareMob {
+  width: 100%;
+  overflow: hidden;
+}
+
+.imgsquareMob img {
+  width: 100%;
+}
+
+/*information section right 64px bottoms of top two boxes only*/
+.information{
+  padding-bottom: 64px;
+}
+
+/*information section right 32px bottom box only*/
+#grey {
+  padding-bottom: 32px;
+}
+
+/* learning sect - background color and distances*/
+
+.learn h2 {
+  padding-bottom: 8px;
+}
+
+.LearnScript h4 {
+  background-color: rgb(212, 214, 216);
+  padding: 16px 16px 24px 16px;
+}
+
+.LearnScript {
+  padding: 8px 16px 8px 16px;
+}
+
+.containLearn {
+  padding-bottom: 24px; /* learning sect - added to 8px of LearnScript, equalling 32px as requested*/
+}
+
+} /* this closes the MOBILE VERSION responsive rule*/
+
+
+/*banner & main information & thesis GENERAL*/
+
+.left img {
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.container span {
+    font-size: 0.8rem;
+}
+
+.script span, .details p {
+  padding: 8px 0;
+}
+
+/*banner only*/
+
+.banner {
+  background-color: rgb(212, 214, 216);
+}
+
+.script a {
+  color: white;
+}
+
+.script span {
+  display: block;
+  text-align: center;
+  background-color: rgb(83, 84, 86);
+}
+
+/*main information and thesis */
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details h4,
+.details span,
+.details p {
+  padding-left: 16px;
+  margin: 0;
+}
+
+/*main information only */
+
+.left h2 {
+  padding-top: 8px;
+}
+
+.details a {
+  color: blue;
+}
+
+.left span {
+  font-family: arial;
+}
+
+
+/*learning*/
+
+.LearnDet {
+  width: 100;
+  overflow: hidden;
+  background-color: white;
+}
+
+.LearnDet img {
+  width: 100%;
+  height: auto;
+}
+
+.LearnScript h4 {
+  margin: 0;
+}
+
+.LearnScript p {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/*thesis*/
+
+.title h2 {
+  text-align: center;
+  padding-top: 32px;
+  margin: 0;
+}
+
+.left video {
+  width: 100%;
+}
+
+.thesis {
+  padding-top: 32px;
+}
+
+/*footer*/
+
+footer span {
+font-size: 0.6rem;
+margin: 16px 0;
+}
+
+/*mobile*/
+
+@media only screen and (max-width: 480px) {
+
+}
